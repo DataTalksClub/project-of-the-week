@@ -27,7 +27,7 @@ This is a proposed plan only, you don’t have to follow it day-by-day.
 * Action 2
 * Action 3
 * Create a GitHub project (if day 1)
-* Commit your chanages (if day 2+)
+* Commit your changes (if day 2+)
 * Share your progress in Slack and in social media
 
 Materials
