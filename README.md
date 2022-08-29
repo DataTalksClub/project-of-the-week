@@ -20,6 +20,7 @@ them together and hold each other accountable.
 
 ## Projects 
 
+* [2022-08-31: Clustering](2022-08-31-clustering.md)
 * [2022-08-14: Streamlit frontend for ML](2022-08-14-frontend.md)
 
 Have other ideas? Suggest them in the `#project-of-the-week` channel! 
@@ -42,9 +43,8 @@ It helps you get noticed and will lead to:
 
 Here's a more compresensive reading on why you want to do it: https://github.com/readme/guides/publishing-your-work
 
-
 Use hashtag #ProjectOfTheWeek to share your progress on social media
 
-TODO: 
+Examples:
 
-* add post examples
+* https://twitter.com/Al_Grigor/status/1558906958471725057
