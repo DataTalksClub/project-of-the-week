@@ -9,6 +9,9 @@ For more information about the "Project of the Week" initiative
 at DataTalks.Club, see [README.md](README.md).
 
 
+If you want to receive reminders about this event, [sign up here](https://lu.ma/dtc-potw-clustering)
+
+
 ## Technologies
 
 - Scikit-Learn  
