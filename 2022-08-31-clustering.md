@@ -119,6 +119,8 @@ Found good materials? Create a PR with links!
 - 🏫 [Cluster Analysis in Data Mining (Coursera)](https://www.coursera.org/learn/cluster-analysis)
 - 🗒️ [The 5 Clustering Algorithms Data Scientists Need to Know](https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68)
 - 🗒️ [Awesome Clustering Resources](https://github.com/durgeshsamariya/awesome-clustering-resources)
+- 🗒️ [Clustering — When You Should Use it and Avoid It](https://www.explorium.ai/blog/clustering-when-you-should-use-it-and-avoid-it/)
+- 🗒️ [How to Answer Business Questions Using Cluster Analysis](https://blog.aptitive.com/how-to-answer-business-questions-using-cluster-analysis-in-r-8bd5fe0103ca?gi=188b14be6379)
 
 **Notebooks:**
 
