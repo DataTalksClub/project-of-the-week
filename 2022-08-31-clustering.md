@@ -150,7 +150,7 @@ Found good materials? Create a PR with links!
 
 List of projects from our participants:
 
-* Project link 1
+* [Customer Segmentation by Esteban Encina](https://github.com/eeeds/customer-segmentation)
 * Project link 2
 * ...
 * (Create a PR)
