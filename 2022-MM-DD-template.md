@@ -7,7 +7,11 @@
 For more information about the "Project of the Week" initiative
 at DataTalks.Club, see [README.md](README.md).
 
-If you want to receive reminders about this event, sign up here (TODO)
+If you want to receive reminders about this event, sign up here
+
+<p align="center">
+  <a href="TODO"><img src="https://user-images.githubusercontent.com/875246/185755203-17945fd1-6b64-46f2-8377-1011dcb1a444.png" height="50" /></a>
+</p>
 
 
 ## Technologies 
