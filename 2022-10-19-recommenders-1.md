@@ -31,7 +31,7 @@ This is a proposed plan only, you don’t have to follow it day-by-day.
 * Come up with a project idea.
 * Select the dataset for your project.
 * Create a GitHub project.
-* Share your progress in Slack and in social media.
+* Share your progress on Slack and in social media.
 
 
 ### Day 2 (20 October, Thursday)
@@ -39,7 +39,7 @@ This is a proposed plan only, you don’t have to follow it day-by-day.
 * Learn the basics about recommendation systems (see Suggested materials).
 * Perform exploratory data analysis of your data in a Jupyter notebook
 * Commit your changes.
-* Share your progress in Slack and in social media.
+* Share your progress on Slack and in social media.
 
 Suggested materials
 
@@ -53,7 +53,7 @@ Found good materials? Create a PR with links!
 * Continue learning the basics about recommendation systems (see Suggested materials).
 * Perform cleaning of your data in a Jupyter notebook.
 * Commit your changes.
-* Share your progress in Slack and in social media.
+* Share your progress on Slack and in social media.
 
 Suggested materials
 
@@ -66,7 +66,7 @@ Found good materials? Create a PR with links!
 
 * Learn about Content-based recommendation systems.
 * Commit your changes.
-* Share your progress in Slack and in social media.
+* Share your progress on Slack and in social media.
 
 Suggested materials
 
@@ -79,7 +79,7 @@ Found good materials? Create a PR with links!
 
 * Continue learning about Content-based recommendation systems.
 * Commit your changes.
-* Share your progress in Slack and in social media.
+* Share your progress on Slack and in social media.
 
 Suggested materials
 
@@ -92,7 +92,7 @@ Found good materials? Create a PR with links!
 
 * Learn about Collaborative Filtering recommendation systems.
 * Commit your changes.
-* Share your progress in Slack and in social media.
+* Share your progress on Slack and in social media.
 
 Suggested materials
 
@@ -105,7 +105,7 @@ Found good materials? Create a PR with links!
 
 * Continue learning about Collaborative Filtering recommendation systems.
 * Commit your changes.
-* Share your progress in Slack and in social media.
+* Share your progress on Slack and in social media.
 
 Suggested materials
 
@@ -119,7 +119,7 @@ Found good materials? Create a PR with links!
 - Continue exploring more about this topic
 - Polish the documentation for your project
 - Commit your changes.
-- Share your progress in Slack and in social media
+- Share your progress on Slack and in social media
 - Give us feedback
 - Add the link to your project to this project of the week github page
 
