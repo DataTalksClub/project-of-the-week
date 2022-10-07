@@ -20,7 +20,7 @@ them together and hold each other accountable.
 
 ## Projects 
 
-* [2022-10-12: Recommender Systems week 1](2022-10-12-recommenders-1.md)
+* [2022-10-19: Recommender Systems week 1](2022-10-19-recommenders-1.md)
 * [2022-08-31: Clustering](2022-08-31-clustering.md)
 * [2022-08-14: Streamlit frontend for ML](2022-08-14-frontend.md)
 
