@@ -1,7 +1,7 @@
 ## Project name
 
-* **Goal**: PROJECT_GOAL
-* **Dates**: from DATE_START to DATE_END
+* **Goal**: Learn about the different types of recommendation system algorithms and explore them in Jupyter notebooks. 
+* **Dates**: from 19 October to 2 October
 * **Where:** [`#project-of-the-week`](https://app.slack.com/client/T01ATQK62F8/C02BP4FQH36) in DataTalks.Club (get in slack here: [https://datatalks.club/slack.html](https://datatalks.club/slack.html))
 
 For more information about the "Project of the Week" initiative
@@ -15,9 +15,9 @@ If you want to receive reminders about this event, sign up here
 
 ## Technologies 
 
-* Tech 1
-* Tech 2
-* Tech 3
+* Scikit-Learn
+* Jupyter notebooks
+
 
 Note: this is a suggested list of technologies, you can chose
 alternatives instead
@@ -26,48 +26,115 @@ alternatives instead
 
 This is a proposed plan only, you don’t have to follow it day-by-day.
 
+### Day 1 (19 October, Wednesday)
 
-### Day X (DD MMMM, Day of the week)
+* Come up with a project idea.
+* Select the dataset for your project.
+* Create a GitHub project.
+* Share your progress in Slack and in social media.
 
-* Action 1 
-* Action 2
-* Action 3
-* Create a GitHub project (if day 1)
-* Commit your changes (if day 2+)
-* Share your progress in Slack and in social media
+
+### Day 2 (20 October, Thursday)
+
+* Learn the basics about recommendation systems (see Suggested materials).
+* Perform exploratory data analysis of your data in a Jupyter notebook
+* Commit your changes.
+* Share your progress in Slack and in social media.
 
 Suggested materials
 
-* 🗒️ [Article link name](https://example.com)
-* 📺 [YouTube video name](https://youtube.com)
-* 🏫 [Course link name](https://coursera.com)
-* 💻 [Code link name](https://github.com)
+* 🗒️ [Background section of Google Recommendation systems course](https://developers.google.com/machine-learning/recommendation)
+* 🏫 [ML Zoomcamp - EDA section](https://github.com/alexeygrigorev/mlbookcamp-code/blob/master/course-zoomcamp/02-regression/03-eda.md)
 
 Found good materials? Create a PR with links!
 
-> Copy this block 6 times
+### Day 3 (21 October, Friday)
+
+* Continue learning the basics about recommendation systems (see Suggested materials).
+* Perform cleaning of your data in a Jupyter notebook.
+* Commit your changes.
+* Share your progress in Slack and in social media.
+
+Suggested materials
+
+* 🗒️ [Background section of Google Recommendation systems course](https://developers.google.com/machine-learning/recommendation)
 
 
-### Day 7 (DD MMMM, Day of the week)
+Found good materials? Create a PR with links!
+
+### Day 4 (22 October, Saturday)
+
+* Learn about Content-based recommendation systems.
+* Commit your changes.
+* Share your progress in Slack and in social media.
+
+Suggested materials
+
+* 🗒️ [Content-based Filtering section of Google Recommendation systems course](https://developers.google.com/machine-learning/recommendation/content-based/basics)
+* 📺 [How to Build a Content-Based Recommendation System using Python](https://www.youtube.com/watch?v=ijtxuF_5kEU)
+
+Found good materials? Create a PR with links!
+
+### Day 5 (23 October, Sunday)
+
+* Continue learning about Content-based recommendation systems.
+* Commit your changes.
+* Share your progress in Slack and in social media.
+
+Suggested materials
+
+* 🗒️ [Content-based Filtering section of Google Recommendation systems course](https://developers.google.com/machine-learning/recommendation/content-based/basics)
+* 📺 [How to Build a Content-Based Recommendation System using Python](https://www.youtube.com/watch?v=ijtxuF_5kEU)
+
+Found good materials? Create a PR with links!
+
+### Day 6 (24 October, Monday)
+
+* Learn about Collaborative Filtering recommendation systems.
+* Commit your changes.
+* Share your progress in Slack and in social media.
+
+Suggested materials
+
+* 🗒️ [Collaborative Filtering section of Google Recommendation systems course](https://developers.google.com/machine-learning/recommendation/collaborative/basics)
+* 🗒️ [Build a Recommendation Engine With Collaborative Filtering](https://realpython.com/build-recommendation-engine-collaborative-filtering/)
+
+Found good materials? Create a PR with links!
+
+### Day 7 (25 October, Tuesday)
+
+* Continue learning about Collaborative Filtering recommendation systems.
+* Commit your changes.
+* Share your progress in Slack and in social media.
+
+Suggested materials
+
+* 🗒️ [Collaborative Filtering section of Google Recommendation systems course](https://developers.google.com/machine-learning/recommendation/collaborative/basics)
+* 🗒️ [Build a Recommendation Engine With Collaborative Filtering](https://realpython.com/build-recommendation-engine-collaborative-filtering/)
+
+Found good materials? Create a PR with links!
+
+### Day 8 (26 October, Wednesday)
 
 - Continue exploring more about this topic
 - Polish the documentation for your project
-- Push your changes to github
+- Commit your changes.
 - Share your progress in Slack and in social media
 - Give us feedback
 - Add the link to your project to this project of the week github page
 
 ## Other useful materials 
 
-* 🗒️ [Article link name](https://example.com)
-* 📺 [YouTube video name](https://youtube.com)
-* 🏫 [Course link name](https://coursera.com)
+* 🗒️ [Google Recommendation systems course](https://developers.google.com/machine-learning/recommendation)
+* 🗒️ [Introduction to recommender systems](https://towardsdatascience.com/introduction-to-recommender-systems-6c66cf15ada)
+* 🗒️ [Recommender Systems: Machine Learning Metrics and Business Metrics](https://neptune.ai/blog/recommender-systems-metrics)
 
-Datasets
 
-* 💾 [Dataset name 1](https://dataset.com)
-* 💾 [Dataset name 2](https://dataset.com)
+## Datasets
 
+* 💾 [Recommendation systems datasets on Kaggle](https://www.kaggle.com/datasets?search=recommendation+systems)
+* 💾 [Recommender Systems and Personalization Datasets](https://cseweb.ucsd.edu/~jmcauley/datasets.html)
+* 💾 [Common Datasets Benchmark for Recommendation System](https://medium.com/data-folks-indonesia/common-datasets-benchmark-for-recommendation-system-933c4d956b7b)
 
 **Materials legend**:
 
@@ -81,10 +148,7 @@ Datasets
 
 There are other things you can try:
 
-* Thing 1
-* Thing 2
-* ...
-
+* Learn about using Deep Neural Network Models for recommendation systems.
 
 
 ## Projects
