@@ -1,7 +1,7 @@
 ## Project name
 
 * **Goal**: Learn about the different types of recommendation system algorithms and explore them in Jupyter notebooks. 
-* **Dates**: from 19 October to 2 October
+* **Dates**: from 19 October to 2 November
 * **Where:** [`#project-of-the-week`](https://app.slack.com/client/T01ATQK62F8/C02BP4FQH36) in DataTalks.Club (get in slack here: [https://datatalks.club/slack.html](https://datatalks.club/slack.html))
 
 For more information about the "Project of the Week" initiative
@@ -17,6 +17,8 @@ If you want to receive reminders about this event, sign up here
 
 * Scikit-Learn
 * Jupyter notebooks
+* [Implicit](https://implicit.readthedocs.io/en/latest/)
+* [Surprise](https://github.com/NicolasHug/Surprise)
 
 
 Note: this is a suggested list of technologies, you can chose
