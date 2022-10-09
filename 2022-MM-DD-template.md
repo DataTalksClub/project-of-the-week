@@ -78,7 +78,7 @@ Datasets
 * 📺 Video tutorial
 * 💻 Code
 
-## Other thigns
+## Other things
 
 There are other things you can try:
 
