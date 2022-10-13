@@ -130,6 +130,7 @@ Found good materials? Create a PR with links!
 * 🗒️ [Google Recommendation systems course](https://developers.google.com/machine-learning/recommendation)
 * 🗒️ [Introduction to recommender systems](https://towardsdatascience.com/introduction-to-recommender-systems-6c66cf15ada)
 * 🗒️ [Recommender Systems: Machine Learning Metrics and Business Metrics](https://neptune.ai/blog/recommender-systems-metrics)
+* 🗒️ [Building Recommender Engines: Challenges and Opportunities](https://youtu.be/PjVEan8QgCI)
 
 
 ## Datasets
@@ -146,7 +147,7 @@ Found good materials? Create a PR with links!
 * 📺 Video tutorial
 * 💻 Code
 
-## Other thigns
+## Other things
 
 There are other things you can try:
 
