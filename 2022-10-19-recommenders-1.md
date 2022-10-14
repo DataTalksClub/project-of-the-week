@@ -1,4 +1,4 @@
-## Project name
+## DIY Recommendation Systems
 
 * **Goal**: Learn about the different types of recommendation system algorithms and explore them in Jupyter notebooks. 
 * **Dates**: from 19 October to 2 November
