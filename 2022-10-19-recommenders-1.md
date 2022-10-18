@@ -47,6 +47,7 @@ Suggested materials
 
 * 🗒️ [Background section of Google Recommendation systems course](https://developers.google.com/machine-learning/recommendation)
 * 🏫 [ML Zoomcamp - EDA section](https://github.com/alexeygrigorev/mlbookcamp-code/blob/master/course-zoomcamp/02-regression/03-eda.md)
+* 🏫 [Andrew NG - New ML Specialization on Coursera ](https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning/home/week/3)
 
 Found good materials? Create a PR with links!
 
