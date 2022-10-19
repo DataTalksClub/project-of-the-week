@@ -159,9 +159,4 @@ There are other things you can try:
 
 List of projects from our participants:
 
-* Project link 1
-* Project link 2
-* ...
-* (Create a PR)
-
-(We will put the projects here after the event finishes)
+* https://github.com/belafdil-chakib/project-of-the-week-recommendation-system
