@@ -49,7 +49,12 @@ Suggested materials
 * 🏫 [ML Zoomcamp - EDA section](https://github.com/alexeygrigorev/mlbookcamp-code/blob/master/course-zoomcamp/02-regression/03-eda.md)
 * 🏫 [Andrew NG - New ML Specialization on Coursera ](https://www.coursera.org/learn/unsupervised-learning-recommenders-reinforcement-learning/home/week/2)
 
+* 🏫 [Microsoft recommenders](https://github.com/microsoft/recommenders)
+* 🏫 [Netflix matrix factorization Paper](https://datajobs.com/data-science-repo/Recommender-Systems-%5BNetflix%5D.pdf)
+
 Found good materials? Create a PR with links!
+
+
 
 ### Day 3 (21 October, Friday)
 
