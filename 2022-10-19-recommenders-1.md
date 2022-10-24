@@ -19,7 +19,7 @@ If you want to receive reminders about this event, sign up here
 * Jupyter notebooks
 * [Implicit](https://implicit.readthedocs.io/en/latest/)
 * [Surprise](https://github.com/NicolasHug/Surprise)
-
+* [LightFM](https://making.lyst.com/lightfm/docs/index.html)
 
 Note: this is a suggested list of technologies, you can chose
 alternatives instead
@@ -107,6 +107,7 @@ Suggested materials
 
 * 🗒️ [Collaborative Filtering section of Google Recommendation systems course](https://developers.google.com/machine-learning/recommendation/collaborative/basics)
 * 🗒️ [Build a Recommendation Engine With Collaborative Filtering](https://realpython.com/build-recommendation-engine-collaborative-filtering/)
+* 🗒️ [An implicit feedback recommender for the Movielens dataset](https://making.lyst.com/lightfm/docs/examples/movielens_implicit.html)
 
 Found good materials? Create a PR with links!
 
