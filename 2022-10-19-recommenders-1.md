@@ -139,6 +139,7 @@ Found good materials? Create a PR with links!
 * 🗒️ [Introduction to recommender systems](https://towardsdatascience.com/introduction-to-recommender-systems-6c66cf15ada)
 * 🗒️ [Recommender Systems: Machine Learning Metrics and Business Metrics](https://neptune.ai/blog/recommender-systems-metrics)
 * 🗒️ [Building Recommender Engines: Challenges and Opportunities](https://youtu.be/PjVEan8QgCI)
+* 💻 [Sample project](https://github.com/alexeygrigorev/product-recommendation) for Part 1.
 
 
 ## Datasets
