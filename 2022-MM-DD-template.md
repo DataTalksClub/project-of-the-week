@@ -35,7 +35,7 @@ This is a proposed plan only, you don’t have to follow it day-by-day.
 * Action 3
 * Create a GitHub project (if day 1)
 * Commit your changes (if day 2+)
-* Share your progress in Slack and in social media
+* Share your progress in Slack and on social media
 
 Suggested materials
 
@@ -54,7 +54,7 @@ Found good materials? Create a PR with links!
 - Continue exploring more about this topic
 - Polish the documentation for your project
 - Push your changes to github
-- Share your progress in Slack and in social media
+- Share your progress in Slack and on social media
 - Give us feedback
 - Add the link to your project to this project of the week github page
 
