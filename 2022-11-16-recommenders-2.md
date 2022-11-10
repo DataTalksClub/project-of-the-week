@@ -1,6 +1,6 @@
 ## DIY Recommendation Systems (Part 2)
 
-* **Goal**: After learning about the different types of recommendation system algorithms during week 1, now we compare the two algorithms we explored. Also, we create a more advanced version of a recommendation system using a hybrid approach.
+* **Goal**: After learning about the different types of recommendation system algorithms during [Part 1](2022-10-19-recommenders-1.md), now we compare the two algorithms we explored. Also, we create a more advanced version of a recommendation system using a hybrid approach.
 * **Dates**: from 16th to 23rd November.
 * **Where:** [`#project-of-the-week`](https://app.slack.com/client/T01ATQK62F8/C02BP4FQH36) in DataTalks.Club (get in slack here: [https://datatalks.club/slack.html](https://datatalks.club/slack.html))
 
@@ -31,14 +31,14 @@ This is a proposed plan only, you don’t have to follow it day-by-day.
 
 ### Day 0 (16 November, Wednesday)
 
-* Recap of the project you work on during Part 1 of this project-of-the-week.
+* Recap of the project you work on during [Part 1](2022-10-19-recommenders-1.md) of this project-of-the-week.
 * If you couldn’t work on Part 1 of this project-of-the-week, then you can catch up by quickly reviewing some of the suggested materials.
 * Create a GitHub project
 * Share your progress in Slack and on social media
 
 Suggested materials
 
-* 💻 [Sample project](https://github.com/alexeygrigorev/product-recommendation) for Part 1.
+* 💻 [Sample project](https://github.com/alexeygrigorev/product-recommendation) for [Part 1](2022-10-19-recommenders-1.md).
 
 Would you like to add your project for Part 1? Create a PR with links!
 
@@ -46,11 +46,15 @@ Would you like to add your project for Part 1? Create a PR with links!
 ### Day 1 (17 November, Thursday)
 
 * Learn about evaluation metrics for recommender systems.
+  * Check which metrics are available
+  * Learn more about average precision and MAP.
 * Share your progress in Slack and on social media.
 
+**Tip:** You may find useful to have a baseline solution (e.g. sorting by frequency) and try to evaluate it.
 
 Suggested materials
 
+* 🗒️ [Recommender Systems — It’s Not All About the Accuracy](https://gab41.lab41.org/recommender-systems-its-not-all-about-the-accuracy-562c7dceeaff)
 * 🗒️ [Evaluation Metrics for Recommender Systems](https://towardsdatascience.com/evaluation-metrics-for-recommender-systems-df56c6611093)
 * 🗒️ [Recommender Systems: Machine Learning Metrics and Business Metrics](https://neptune.ai/blog/recommender-systems-metrics)
 * 📺 [Week 6: Recommender Systems - Part 4: Evaluation of Recommender Systems](https://www.youtube.com/watch?v=mpv8iMe24-Q)
@@ -59,6 +63,12 @@ Suggested materials
 ### Day 2 (18 November, Friday)
 
 * Continue learning about evaluation metrics for recommender systems.
+  * Map@k and Mar@k
+  * Coverage
+  * Novelty
+  * Personalization
+  * MSE and RMSE
+  * ROC and AUC
 * Decide which metrics you will consider for comparing the recommender systems you created.
 * Commit your changes
 * Share your progress in Slack and on social media
@@ -66,6 +76,7 @@ Suggested materials
 Suggested materials
 
 * 🗒️ [Evaluation Metrics for Recommender Systems](https://towardsdatascience.com/evaluation-metrics-for-recommender-systems-df56c6611093)
+* 💻 [recmetrics - A python library of evalulation metrics and diagnostic tools for recommender systems.](https://github.com/statisticianinstilettos/recmetrics)
 * 🗒️ [Recommender Systems: Machine Learning Metrics and Business Metrics](https://neptune.ai/blog/recommender-systems-metrics)
 * 📺 [Week 6: Recommender Systems - Part 4: Evaluation of Recommender Systems](https://www.youtube.com/watch?v=mpv8iMe24-Q)
 
@@ -73,9 +84,11 @@ Found good materials? Create a PR with links!
 
 ### Day 3 (19 November, Saturday)
 
-* Compare the recommender systems you created using the metrics that you selected.
+* Compare the recommender systems you created (Content based and Collaborative filtering) using the metrics that you selected.
 * Push your changes to GitHub.
 * Share your progress in Slack and on social media.
+
+**Note:** If you didn't have the chance to work on the project, have a look at projects from [Part 1](2022-10-19-recommenders-1.md).
 
 ### Day 4 (20 November, Sunday)
 
