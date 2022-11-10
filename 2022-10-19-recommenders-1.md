@@ -164,11 +164,7 @@ There are other things you can try:
 
 ## Projects
 
-List of projects from our participants:
+List of projects from the participants:
 
-* Project link 1
-* Project link 2
-* ...
-* (Create a PR)
-
-(We will put the projects here after the event finishes)
+* https://github.com/alexeygrigorev/product-recommendation
+* Add your project here
