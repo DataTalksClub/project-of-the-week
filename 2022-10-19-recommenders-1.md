@@ -167,4 +167,5 @@ There are other things you can try:
 List of projects from the participants:
 
 * https://github.com/alexeygrigorev/product-recommendation
+* https://github.com/MarcosMJD/music-recommender-system-for-spotify
 * Add your project here
