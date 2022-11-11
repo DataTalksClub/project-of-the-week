@@ -168,4 +168,5 @@ List of projects from the participants:
 
 * https://github.com/alexeygrigorev/product-recommendation
 * https://github.com/MarcosMJD/music-recommender-system-for-spotify
+* https://github.com/AhmedMousa-ag/Anime_Recommendation_System_GCP
 * Add your project here
