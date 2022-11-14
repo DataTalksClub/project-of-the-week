@@ -85,6 +85,7 @@ Found good materials? Create a PR with links!
 ### Day 3 (19 November, Saturday)
 
 * Compare the recommender systems you created (Content based and Collaborative filtering) using the metrics that you selected.
+* Come up with a conclusion why both recommender systems are different and write about it.
 * Push your changes to GitHub.
 * Share your progress in Slack and on social media.
 
