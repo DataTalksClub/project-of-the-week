@@ -55,6 +55,7 @@ Would you like to add your project for Part 1? Create a PR with links!
 Suggested materials
 
 * 🗒️ [Recommender Systems — It’s Not All About the Accuracy](https://gab41.lab41.org/recommender-systems-its-not-all-about-the-accuracy-562c7dceeaff)
+* 💻 [Github-repo code for performance metrics](https://github.com/Lab41/hermes/blob/master/src/algorithms/performance_metrics.py)
 * 🗒️ [Evaluation Metrics for Recommender Systems](https://towardsdatascience.com/evaluation-metrics-for-recommender-systems-df56c6611093)
 * 🗒️ [Recommender Systems: Machine Learning Metrics and Business Metrics](https://neptune.ai/blog/recommender-systems-metrics)
 * 📺 [Week 6: Recommender Systems - Part 4: Evaluation of Recommender Systems](https://www.youtube.com/watch?v=mpv8iMe24-Q)
