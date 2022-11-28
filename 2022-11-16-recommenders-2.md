@@ -138,4 +138,3 @@ List of projects from our participants:
 
 * https://github.com/AntonisCSt/Music-Recommender-System
 
-(We will put the projects here after the event finishes)
