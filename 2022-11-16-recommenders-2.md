@@ -136,9 +136,5 @@ Suggested materials
 
 List of projects from our participants:
 
-* Project link 1
-* Project link 2
-* ...
-* (Create a PR)
+* https://github.com/AntonisCSt/Music-Recommender-System
 
-(We will put the projects here after the event finishes)
