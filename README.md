@@ -20,6 +20,8 @@ them together and hold each other accountable.
 
 ## Projects 
 
+* [2022-12-07: FastAPI](2022-12-07-fastapi.md)
+* [2022-11-16: Recommender Systems week 2](2022-11-16-recommenders-2.md)
 * [2022-10-19: Recommender Systems week 1](2022-10-19-recommenders-1.md)
 * [2022-08-31: Clustering](2022-08-31-clustering.md)
 * [2022-08-14: Streamlit frontend for ML](2022-08-14-frontend.md)
