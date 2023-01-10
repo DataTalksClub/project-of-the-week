@@ -50,7 +50,7 @@ Found good materials? Create a PR with links!
 
 * Recap or finish studying GitHub Actions.
 * Study about Triggering a workflow. You can check as well this GitHub Actions Tutorial.
-* Check building and testing through a specific language (for example Python) automated building and test.
+* Check suggested material related to building and testing.
 * Commit your changes.
 * Share your progress in Slack and on social media.
 
@@ -66,7 +66,7 @@ Found good materials? Create a PR with links!
 
 ### Day 3 (13 January, Friday)
 
-* Create your own project that you will use for testing and later deploying (See suggestions bellow). You can use a Machine Learning project from previous project-of-the-week. If you want to create your own, we have a list of some datasets for you to use.
+* Create your own project that you will use for testing (See suggestions bellow). You can use a Machine Learning project from previous project-of-the-week. If you want to create your own, we have a list of some datasets for you to use.
 * Commit your changes.
 * Share your progress in Slack and on social media.
 
