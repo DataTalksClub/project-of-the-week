@@ -17,6 +17,7 @@ them together and hold each other accountable.
 * Learn together
 * Share your progress on social media!
 
+[Video](https://www.loom.com/share/05b9e07f288f492bb15c4b61cdf6db6c)
 
 ## Projects 
 
