@@ -59,7 +59,6 @@ Suggested materials
 
 * 🗒️ [Understanding Github Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
 * 📺 [Triggering a workflow](https://docs.github.com/en/actions/using-workflows/triggering-a-workflow)
-* 🗒️ [Understanding Github Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
 * 🗒️ [Automated building and testing in python](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python)
 
 Found good materials? Create a PR with links!
