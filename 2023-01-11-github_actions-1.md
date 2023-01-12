@@ -49,7 +49,7 @@ Found good materials? Create a PR with links!
 ### Day 2 (12 January, Thursday)
 
 * Recap or finish studying GitHub about Actions.
-* Study about Triggering a workflow. You can check as well this GitHub Actions Tutorial.
+* Study about Triggering a workflow. You can check as well the GitHub Actions Tutorial by TechWorld with Nana.
 * Check suggested material related to building and testing.
 * Commit your changes.
 * Share your progress in Slack and on social media.
@@ -57,9 +57,9 @@ Found good materials? Create a PR with links!
 
 Suggested materials
 
-* 🗒️ [Understanding Github Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions)
-* 📺 [Triggering a workflow](https://docs.github.com/en/actions/using-workflows/triggering-a-workflow)
+* 🗒️ [Triggering a workflow](https://docs.github.com/en/actions/using-workflows/triggering-a-workflow)
 * 🗒️ [Automated building and testing in python](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python)
+* 📺 [GitHub Actions Tutorial]([https://docs.github.com/en/actions/using-workflows/triggering-a-workflow](https://www.youtube.com/watch?v=R8_veQiYBjI))
 
 Found good materials? Create a PR with links!
 
