@@ -141,7 +141,7 @@ Found good materials? Create a PR with links!
 * 🗒️ [GitHub Skills](https://skills.github.com/#automate-workflows-with-github-actions)
 * 📺 [GitHub Actions Tutorial - Basic Concepts and CI/CD Pipeline with Docker by TechWorld with Nana](https://www.youtube.com/watch?v=R8_veQiYBjI)
 * 🗒️ [Deploy a machine learning model with Fastapi docker and github actions](https://towardsdatascience.com/how-to-deploy-a-machine-learning-model-with-fastapi-docker-and-github-actions-13374cbd638a)
-* 🗒️ 💻 [Configuring python linting to be part of CI/CD using GitHub actions](https://dev.to/freshbooks/configuring-python-linting-to-be-part-of-cicd-using-github-actions-1731)
+* 🗒️ [Configuring python linting to be part of CI/CD using GitHub actions](https://dev.to/freshbooks/configuring-python-linting-to-be-part-of-cicd-using-github-actions-1731)
 
 Datasets
 
