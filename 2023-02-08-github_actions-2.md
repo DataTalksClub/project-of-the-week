@@ -48,7 +48,7 @@ Found good materials? Create a PR with links!
 
 ### Day 2 (9 February, Thursday)
 
-* Build a service (flash or Fast-API) from your Part 1 project. You can copy and run/test the suggested material tutorial.
+* Build a service (Flask or FastAPI) from your Part 1 project. You can copy and run/test the suggested material tutorial.
 * If you dont have a project, you can select this example from FAST-API project of the week by Liliana. 
 * Also, If you want to create your project from scratch, you can select a dataset from the list bellow.
 * Commit your changes.
