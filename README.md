@@ -21,6 +21,7 @@ them together and hold each other accountable.
 
 ## Projects 
 
+* [2023-03-01: Getting started with Julia](2023-03-01-getting-started-julia.md)
 * [2023-02-08: GitHub Actions week 2](2023-02-08-github_actions-2.md)
 * [2023-01-11: GitHub Actions week 1](2023-01-11-github_actions-1.md)
 * [2022-12-07: FastAPI](2022-12-07-fastapi.md)
