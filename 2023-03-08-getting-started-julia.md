@@ -30,7 +30,7 @@ alternatives instead
 This is a proposed plan only, you don’t have to follow it day-by-day.
 
 
-### Day 1 (1 March, Wednesday)
+### Day 1 (8 March, Wednesday)
 
 * Install the [Julia programming language](https://julialang.org/downloads/).
 * (Optional) Set up an IDE for Julia
@@ -50,7 +50,7 @@ Suggested materials
 Found good materials? Create a PR with links!
 
 
-### Day 2 (2 March, Thursday)
+### Day 2 (9 March, Thursday)
 
 * Sign up for [JuliaAcademy](https://juliaacademy.com/).
 * In the JuliaAcademy, register for the course Introduction to Julia (for programmers).
@@ -67,7 +67,7 @@ Suggested materials
 
 Found good materials? Create a PR with links!
 
-### Day 3 (3 March, Friday)
+### Day 3 (10 March, Friday)
 
 * Learn [how to read input from users in Julia](https://www.geeksforgeeks.org/taking-input-from-users-in-julia/).
 * Work on the [Mad Libs beginner project](https://towardsdatascience.com/5-julia-projects-for-beginners-easy-ideas-to-get-started-coding-in-julia-938b823a0a08) or pick another from the [Julia Projects for Beginners](https://github.com/logankilpatrick/Julia-Projects-for-Beginners) GitHub repository.
@@ -82,7 +82,7 @@ Suggested materials
 
 Found good materials? Create a PR with links!
 
-### Day 4 (4 March, Saturday)
+### Day 4 (11 March, Saturday)
 
 * Go through the **Control flow** section of the [JuliaAcademy course](https://juliaacademy.com/courses/375479/lectures/5816184).
 * Work on other projects from the [Julia Projects for Beginners](https://github.com/logankilpatrick/Julia-Projects-for-Beginners) GitHub repository.
@@ -90,7 +90,7 @@ Found good materials? Create a PR with links!
 * Share your progress in Slack and on social media.
 
 
-### Day 5 (5 March, Sunday)
+### Day 5 (12 March, Sunday)
 
 * Go through the **Packages and Plotting** section of the [JuliaAcademy course](https://juliaacademy.com/courses/375479/lectures/5816184).
 * (Optional) Watch the **Iris Flower Data Set** section of the [Julia Analysis for beginners](https://www.youtube.com/watch?v=7M8e2Q5BirA) video and code along.
@@ -98,7 +98,7 @@ Found good materials? Create a PR with links!
 * Push your changes to GitHub.
 * Share your progress in Slack and on social media.
 
-### Day 6 (6 March, Monday)
+### Day 6 (13 March, Monday)
 
 * Continue exploring more about this topic.
 * (Optional) Go through the **Other useful topics** section of the [JuliaAcademy course](https://juliaacademy.com/courses/375479/lectures/5816184).
