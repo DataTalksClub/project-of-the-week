@@ -80,7 +80,8 @@ Found good materials? Create a PR with links!
 ### Day 4 (20 May, Saturday)
 
 * Check out the very special topics from rust called [Memory Management, Heap & Stack and Ownership](https://doc.rust-lang.org/book/ch04-00-understanding-ownership.html).
-* Check out the video tutorials bellow
+* Check out the video tutorials below
+* (Optional) For more practice go to [Exercises in Rust](https://github.com/rust-lang/rustlings/tree/main/exercises) and do the string exercises.
 * Push your changes to GitHub.
 * Share your progress in Slack and on social media.
 
