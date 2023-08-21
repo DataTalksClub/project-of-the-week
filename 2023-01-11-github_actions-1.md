@@ -65,7 +65,7 @@ Found good materials? Create a PR with links!
 
 ### Day 3 (13 January, Friday)
 
-* Create your own project that you will use for testing (See suggestions bellow). You can use a Machine Learning project from previous project-of-the-week. If you want to create your own, we have a list of some datasets for you to use.
+* Create your own project that you will use for testing (See suggestions below). You can use a Machine Learning project from previous project-of-the-week. If you want to create your own, we have a list of some datasets for you to use.
 * Commit your changes.
 * Share your progress in Slack and on social media.
 
