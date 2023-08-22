@@ -21,7 +21,7 @@ them together and hold each other accountable.
 
 ## Projects 
 
-* [2023-08-28: Python package](2023-08-28-python-package.md)
+* [2023-08-28: Python package](2023-08-30-python-package.md)
 * [2023-05-17: Getting started with Rust](2023-05-17-getting-started-rust.md)
 * [2023-03-08: Getting started with Julia](2023-03-08-getting-started-julia.md)
 * [2023-02-08: GitHub Actions week 2](2023-02-08-github_actions-2.md)
