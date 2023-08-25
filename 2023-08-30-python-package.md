@@ -13,7 +13,6 @@ If you want to receive reminders about this event, sign up here
   <a href="lu.ma/dtc-potw-diypythonpackage"><img src="https://user-images.githubusercontent.com/875246/185755203-17945fd1-6b64-46f2-8377-1011dcb1a444.png" height="50" /></a>
 </p>
 
-
 ## Technologies 
 
 * Python
@@ -78,7 +77,7 @@ Suggested materials
 
 Found good materials? Create a PR with links!
 
-### Day 4 (1 September, Saturday)
+### Day 4 (2 September, Saturday)
 
 * Add [docstrings](https://peps.python.org/pep-0257/) to all of the functions.
 * Use a formatter such as [black](https://github.com/psf/black) to format your code.
@@ -96,7 +95,7 @@ Suggested materials
 
 Found good materials? Create a PR with links!
 
-### Day 5 (2 September, Sunday)
+### Day 5 (3 September, Sunday)
 
 * Create a README for your package. Give examples of how to use the package.
 * Push your changes to GitHub.
@@ -109,7 +108,7 @@ Suggested materials
 
 Found good materials? Create a PR with links!
 
-### Day 6 (3 September, Monday)
+### Day 6 (4 September, Monday)
 
 * Build your Python package:
     * Follow the steps from the tutorial [How to Build a Complete Python Package Step-by-Step](https://www.youtube.com/watch?v=5KEObONUkik)
@@ -125,7 +124,7 @@ Suggested materials
 
 Found good materials? Create a PR with links!
 
-### Day 7 (4 September, Tuesday)
+### Day 7 (5 September, Tuesday)
 
 * Continue improving your package.
 * Polish the documentation for your project
