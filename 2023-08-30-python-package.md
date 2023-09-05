@@ -141,7 +141,7 @@ Found good materials? Create a PR with links!
 List of projects from our participants:
 
 * * [https://github.com/lilianabs/text_preprocessing](https://github.com/lilianabs/text_preprocessing)
-* Project link 2
+* [https://github.com/cyberholics/HyperTune](https://github.com/cyberholics/HyperTune)
 * ...
 * (Create a PR)
 
