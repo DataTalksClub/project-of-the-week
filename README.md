@@ -21,6 +21,7 @@ them together and hold each other accountable.
 
 ## Projects 
 
+* [2023-10-18: Docker week 1](2023-10-18-docker-1.md)
 * [2023-08-28: Python package](2023-08-30-python-package.md)
 * [2023-05-17: Getting started with Rust](2023-05-17-getting-started-rust.md)
 * [2023-03-08: Getting started with Julia](2023-03-08-getting-started-julia.md)
