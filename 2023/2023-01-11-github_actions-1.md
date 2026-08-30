@@ -6,7 +6,7 @@
 * **Where:** [`#project-of-the-week`](https://app.slack.com/client/T01ATQK62F8/C02BP4FQH36) in DataTalks.Club (get in slack here: [https://datatalks.club/slack.html](https://datatalks.club/slack.html))
 
 For more information about the "Project of the Week" initiative
-at DataTalks.Club, see [README.md](README.md).
+at DataTalks.Club, see [README.md](../README.md).
 
 If you want to receive reminders about this event, sign up here
 
@@ -72,7 +72,7 @@ Found good materials? Create a PR with links!
 
 Suggested materials
 
-* 💻 [Frontend for your ML model](https://github.com/DataTalksClub/project-of-the-week/blob/main/2022-08-14-frontend.md)
+* 💻 [Frontend for your ML model](https://github.com/DataTalksClub/project-of-the-week/blob/main/2022/2022-08-14-frontend.md)
 * 💾 [list of some datasets](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/week_7_project/datasets.md)
 
 Found good materials? Create a PR with links!

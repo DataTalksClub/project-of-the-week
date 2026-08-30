@@ -21,18 +21,18 @@ them together and hold each other accountable.
 
 ## Projects 
 
-* [2026-09-02: SentinelAI](2026-09-02-SentinelAI.md)
-* [2023-10-18: Docker week 1](2023-10-18-docker-1.md)
-* [2023-08-28: Python package](2023-08-30-python-package.md)
-* [2023-05-17: Getting started with Rust](2023-05-17-getting-started-rust.md)
-* [2023-03-08: Getting started with Julia](2023-03-08-getting-started-julia.md)
-* [2023-02-08: GitHub Actions week 2](2023-02-08-github_actions-2.md)
-* [2023-01-11: GitHub Actions week 1](2023-01-11-github_actions-1.md)
-* [2022-12-07: FastAPI](2022-12-07-fastapi.md)
-* [2022-11-16: Recommender Systems week 2](2022-11-16-recommenders-2.md)
-* [2022-10-19: Recommender Systems week 1](2022-10-19-recommenders-1.md)
-* [2022-08-31: Clustering](2022-08-31-clustering.md)
-* [2022-08-14: Streamlit frontend for ML](2022-08-14-frontend.md)
+* [2026-09-02: SentinelAI](2026/2026-09-02-SentinelAI.md)
+* [2023-10-18: Docker week 1](2023/2023-10-18-docker-1.md)
+* [2023-08-28: Python package](2023/2023-08-30-python-package.md)
+* [2023-05-17: Getting started with Rust](2023/2023-05-17-getting-started-rust.md)
+* [2023-03-08: Getting started with Julia](2023/2023-03-08-getting-started-julia.md)
+* [2023-02-08: GitHub Actions week 2](2023/2023-02-08-github_actions-2.md)
+* [2023-01-11: GitHub Actions week 1](2023/2023-01-11-github_actions-1.md)
+* [2022-12-07: FastAPI](2022/2022-12-07-fastapi.md)
+* [2022-11-16: Recommender Systems week 2](2022/2022-11-16-recommenders-2.md)
+* [2022-10-19: Recommender Systems week 1](2022/2022-10-19-recommenders-1.md)
+* [2022-08-31: Clustering](2022/2022-08-31-clustering.md)
+* [2022-08-14: Streamlit frontend for ML](2022/2022-08-14-frontend.md)
 
 Have other ideas? Suggest them in the `#project-of-the-week` channel! 
 

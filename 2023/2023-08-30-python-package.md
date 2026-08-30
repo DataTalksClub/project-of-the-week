@@ -5,7 +5,7 @@
 * **Where:** [`#project-of-the-week`](https://app.slack.com/client/T01ATQK62F8/C02BP4FQH36) in DataTalks.Club (get in slack here: [https://datatalks.club/slack.html](https://datatalks.club/slack.html))
 
 For more information about the "Project of the Week" initiative
-at DataTalks.Club, see [README.md](README.md).
+at DataTalks.Club, see [README.md](../README.md).
 
 If you want to receive reminders about this event, sign up here
 
@@ -128,7 +128,7 @@ Found good materials? Create a PR with links!
 
 * Continue improving your package.
 * Polish the documentation for your project
-* (Optional) [Create a continuous integration (CI) workflow to build and test your Python project](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python). Follow the [DIY GitHub Actions (Part 1)](https://github.com/DataTalksClub/project-of-the-week/blob/main/2023-01-11-github_actions-1.md) project of the week.
+* (Optional) [Create a continuous integration (CI) workflow to build and test your Python project](https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python). Follow the [DIY GitHub Actions (Part 1)](https://github.com/DataTalksClub/project-of-the-week/blob/main/2023/2023-01-11-github_actions-1.md) project of the week.
 * Push your changes to GitHub.
 * Share your progress in Slack and on social media.
 * Give us feedback.

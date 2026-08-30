@@ -5,7 +5,7 @@
 * **Where:** [`#project-of-the-week`](https://app.slack.com/client/T01ATQK62F8/C02BP4FQH36) in DataTalks.Club (get in slack here: [https://datatalks.club/slack.html](https://datatalks.club/slack.html))
 
 For more information about the "Project of the Week" initiative
-at DataTalks.Club, see [README.md](README.md).
+at DataTalks.Club, see [README.md](../README.md).
 
 If you want to receive reminders about this event, sign up here
 
@@ -137,4 +137,3 @@ Suggested materials
 List of projects from our participants:
 
 * https://github.com/AntonisCSt/Music-Recommender-System
-
