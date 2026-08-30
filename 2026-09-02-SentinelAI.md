@@ -1,11 +1,12 @@
-# SentinelAI — 7-Day Build Plan
+## SentinelAI
 
-- **Goal:** Build an AI-powered website reliability platform end to end — polling, anomaly detection, an AI root-cause investigation, an evaluation layer for that AI output, and a distributed trace connecting all of it.
-- **Duration:** 7 days. One day, one working slice of the system.
-- **Dates:** from 2nd September to 8th September 2026.
-- **Where:** `#project-of-the-week` in DataTalks.Club Slack.
+* Goal: Build an AI-powered website reliability platform end to end — polling, anomaly detection, an AI root-cause investigation, an evaluation layer for that AI output, and a distributed trace connecting all of it.
+* Duration: 7 days. One day, one working slice of the system.
+* Dates: from 2 September to 8 September 2026.
+* Where: [`#project-of-the-week`](https://app.slack.com/client/T01ATQK62F8/C02BP4FQH36) in DataTalks.Club (get in slack here: [https://datatalks.club/slack.html](https://datatalks.club/slack.html))
 
-This is a proposed plan only 
+For more information about the "Project of the Week" initiative
+at DataTalks.Club, see [README.md](README.md).
 
 ## What You're Building
 
@@ -45,12 +46,12 @@ Each of these is a legitimate next project — see Going the Extra Mile at the e
 
 You don't need prior experience with either:
 
-- **Docker:** see the *Containerization* row above for why this project uses Compose (one file, no Kubernetes), then follow the Docker Compose Quickstart linked under Day 1.
-- **FastAPI:** see the *API framework* row above, then follow the FastAPI "First Steps" tutorial linked under Day 1 — you'll have a working endpoint in under 10 minutes.
+* Docker: see the Containerization row above for why this project uses Compose (one file, no Kubernetes), then follow the Docker Compose Quickstart linked under Day 1.
+* FastAPI: see the API framework row above, then follow the FastAPI "First Steps" tutorial linked under Day 1 — you'll have a working endpoint in under 10 minutes.
 
 ## Repo Structure
 
-```
+```text
 sentinelai/
   app/
     main.py
@@ -85,186 +86,219 @@ sentinelai/
 
 ## Database Tables
 
-- **Website** — id, name, url, method, expected_status, check_interval_seconds, created_at
-- **Check** — id, website_id, timestamp, status_code, latency_ms, success, error_message, trace_id
-- **Incident** — id, website_id, opened_at, closed_at, status, severity, trigger_reason
-- **RCAReport** — id, incident_id, summary, root_cause, confidence, impact, remediation, evidence_json, context_snapshot_json, model_name, prompt_tokens, completion_tokens, cost_usd, latency_ms, created_at
-- **EvalResult** — id, rca_report_id, groundedness_score, hallucination_flag, confidence_calibration_score, judge_model, eval_tokens, eval_cost_usd, eval_latency_ms, created_at
+* Website — id, name, url, method, expected_status, check_interval_seconds, created_at
+* Check — id, website_id, timestamp, status_code, latency_ms, success, error_message, trace_id
+* Incident — id, website_id, opened_at, closed_at, status, severity, trigger_reason
+* RCAReport — id, incident_id, summary, root_cause, confidence, impact, remediation, evidence_json, context_snapshot_json, model_name, prompt_tokens, completion_tokens, cost_usd, latency_ms, created_at
+* EvalResult — id, rca_report_id, groundedness_score, hallucination_flag, confidence_calibration_score, judge_model, eval_tokens, eval_cost_usd, eval_latency_ms, created_at
 
 Relationships: one `Website` has many `Check` and `Incident` rows; one `Incident` produces one `RCAReport`; one `RCAReport` is scored by one `EvalResult`.
 
 ## Plan
 
-### Day 1 — Skeleton & Contracts
+This is a proposed plan only, you don't have to follow it day-by-day.
 
-- Set up the repo folders (`app/`, `tests/`, `scripts/`) as shown under Repo Structure above.
-- Write a `docker-compose.yml` with 4 services: `postgres`, `redis`, `api`, `worker` (the worker can be a placeholder for now).
-- Build the smallest possible FastAPI app with one route: `GET /health` returning `{"status": "ok"}`.
-- Define the 5 database tables listed under Database Tables above as SQLAlchemy models. Don't worry about migrations — `Base.metadata.create_all` is enough for this project.
-- Define the Pydantic schemas you'll need later for RCA and eval data.
-- Wire up OpenTelemetry with the console exporter and print one dummy span, just to prove the plumbing works.
+### Day 1 (2 September, Wednesday)
 
-**Why:** see the *API framework*, *Database*, and *Containerization* rows in Tech Stack above, plus *Alembic migrations* in Scope Cuts — it explains why you can skip migrations.
+* Set up the repo folders (`app/`, `tests/`, `scripts/`) as shown under Repo Structure above.
+* Write a `docker-compose.yml` with 4 services: `postgres`, `redis`, `api`, `worker` (the worker can be a placeholder for now).
+* Build the smallest possible FastAPI app with one route: `GET /health` returning `{"status": "ok"}`.
+* Define the 5 database tables listed under Database Tables above as SQLAlchemy models. Don't worry about migrations — `Base.metadata.create_all` is enough for this project.
+* Define the Pydantic schemas you'll need later for RCA and eval data.
+* Wire up OpenTelemetry with the console exporter and print one dummy span, just to prove the plumbing works.
+* Create a GitHub repository.
+* Share your progress in Slack and on social media.
 
-Suggested material:
-- 📘 [Docker Compose Quickstart](https://docs.docker.com/compose/gettingstarted/)
-- 📘 [FastAPI — First Steps](https://fastapi.tiangolo.com/tutorial/first-steps/)
-- 📘 [SQLAlchemy 2.0 — ORM Quickstart](https://docs.sqlalchemy.org/en/20/orm/quickstart.html)
-- 📘 [Pydantic — Models](https://docs.pydantic.dev/latest/concepts/models/)
-- 📘 [OpenTelemetry Python — Getting Started](https://opentelemetry.io/docs/languages/python/getting-started/)
-
-**End of day:** `docker compose up` brings up all 4 containers, `curl localhost:8000/health` returns 200, and one span prints to your terminal.
-
----
-
-### Day 2 — Monitoring Engine
-
-- Add `POST /websites` and `GET /websites` so you can register a site to monitor.
-- Build a background polling job with APScheduler that checks every registered site on a timer.
-- Use `httpx` (async) to make the actual HTTP request to each site and record status code + latency.
-- Write each poll result to the `Check` table in Postgres.
-- Keep a rolling window of recent results per site in Redis, so anomaly checks don't need to hit Postgres on every tick.
-
-**Why:** see the *Scheduling*, *HTTP client*, and *Cache / broker* rows in Tech Stack above — a poll turns into a `Check` row in Postgres and an update to the Redis window on every tick.
+Why: see the API framework, Database, and Containerization rows in Tech Stack above, plus Alembic migrations in Scope Cuts — it explains why you can skip migrations.
 
 Suggested material:
-- 📘 [APScheduler — User Guide](https://apscheduler.readthedocs.io/en/3.x/userguide.html)
-- 📘 [httpx — Async Support](https://www.python-httpx.org/async/)
-- 📘 [redis-py — Client Guide](https://redis.io/docs/latest/develop/clients/redis-py/)
-- 📘 [RESPX — User Guide](https://lundberg.github.io/respx/guide/) (for mocking HTTP calls in tests)
 
-**End of day:** register a real URL and watch `Check` rows accumulate in the database over a couple of minutes.
+* 🗒️ [Docker Compose Quickstart](https://docs.docker.com/compose/gettingstarted/)
+* 🗒️ [FastAPI — First Steps](https://fastapi.tiangolo.com/tutorial/first-steps/)
+* 🗒️ [SQLAlchemy 2.0 — ORM Quickstart](https://docs.sqlalchemy.org/en/20/orm/quickstart.html)
+* 🗒️ [Pydantic — Models](https://docs.pydantic.dev/latest/concepts/models/)
+* 🗒️ [OpenTelemetry Python — Getting Started](https://opentelemetry.io/docs/languages/python/getting-started/)
 
----
+Found good materials? Create a PR with links!
 
-### Day 3 — Anomaly Detection, Incidents, Mock Target
+End of day: `docker compose up` brings up all 4 containers, `curl localhost:8000/health` returns 200, and one span prints to your terminal.
 
-- Write the anomaly rule: open an incident if a site has 3+ consecutive failures, or if latency spikes past some multiple of its rolling average.
-- Build the Incident open/resolve lifecycle. Guard against opening a second incident while one's already open for the same site.
-- Build a tiny second FastAPI app (`mock_targets/flaky_service.py`) that you can toggle into a "broken" mode on demand.
-- Add `POST /admin/simulate-failure/{website_id}` (see Endpoints above) to flip that toggle for demos and tests.
+### Day 2 (3 September, Thursday)
 
-**Why:** see *ML-based anomaly detection* in Scope Cuts above — a simple threshold rule is the right call here, not a shortcut around a "real" version.
+* Add `POST /websites` and `GET /websites` so you can register a site to monitor.
+* Build a background polling job with APScheduler that checks every registered site on a timer.
+* Use `httpx` (async) to make the actual HTTP request to each site and record status code + latency.
+* Write each poll result to the `Check` table in Postgres.
+* Keep a rolling window of recent results per site in Redis, so anomaly checks don't need to hit Postgres on every tick.
+* Commit your changes and push them to GitHub.
+* Share your progress in Slack and on social media.
 
-Suggested material:
-- 📘 [FastAPI — First Steps](https://fastapi.tiangolo.com/tutorial/first-steps/) (you're just running a second small instance of the same app)
-
-**End of day:** toggling the mock target reliably produces exactly one `Incident` row within one polling interval.
-
----
-
-### Day 4 — Context Builder + AI Investigation
-
-- Define `InvestigationContext` as a Pydantic model: recent checks, latency trend, prior incidents, synthetic logs from the mock target.
-- Write a Celery task `investigate_incident` that builds that context and calls the LLM.
-- Force the LLM to return data that matches your `RCAReport` Pydantic schema (fields listed under Database Tables above). Don't regex-parse free text.
-- Save the RCA and the exact context you sent it, side by side, so the reasoning is reproducible later.
-
-**Why:** see *Background jobs* and *LLM integration* in Tech Stack above, and *Multi-LLM abstraction* in Scope Cuts — pick one provider and don't build a switch for others.
+Why: see the Scheduling, HTTP client, and Cache / broker rows in Tech Stack above — a poll turns into a `Check` row in Postgres and an update to the Redis window on every tick.
 
 Suggested material:
-- 📘 [Claude — Tool use overview](https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview) (structured output via tool calling)
-- 📘 [OpenAI — Structured Outputs guide](https://platform.openai.com/docs/guides/structured-outputs/how-to-use)
-- 📘 [Instructor — Start Here](https://python.useinstructor.com/start-here/) (works with either provider, built on Pydantic)
-- 📘 [Celery — Getting Started](https://docs.celeryq.dev/en/stable/getting-started/introduction.html)
 
-**End of day:** trigger a failure and, within seconds, get a full structured RCA report saved to the database.
+* 🗒️ [APScheduler — User Guide](https://apscheduler.readthedocs.io/en/3.x/userguide.html)
+* 🗒️ [httpx — Async Support](https://www.python-httpx.org/async/)
+* 🗒️ [redis-py — Client Guide](https://redis.io/docs/latest/develop/clients/redis-py/)
+* 🗒️ [RESPX — User Guide](https://lundberg.github.io/respx/guide/) (for mocking HTTP calls in tests)
 
----
+Found good materials? Create a PR with links!
 
-### Day 5 — Evaluation Layer
+End of day: register a real URL and watch `Check` rows accumulate in the database over a couple of minutes.
 
-- Write a groundedness heuristic: for every evidence claim in the RCA, check it against a field that actually exists in the stored context snapshot.
-- Add a second LLM call — a judge — that scores correctness, flags hallucinations, and checks whether the model's stated confidence matches how well-supported its answer actually is.
-- Chain `evaluate_rca` after `investigate_incident` so every RCA automatically gets scored.
-- Track cost and latency on both calls.
+### Day 3 (4 September, Friday)
 
-**Why:** two independent signals beat one confidence number — a cheap, deterministic groundedness check catches unsupported claims, and a second LLM call catches things the first model got wrong about itself. This day's test suite is the most important one in the whole project, so budget real time for hand-crafted "good" and "bad" RCA fixtures.
+* Write the anomaly rule: open an incident if a site has 3+ consecutive failures, or if latency spikes past some multiple of its rolling average.
+* Build the Incident open/resolve lifecycle. Guard against opening a second incident while one's already open for the same site.
+* Build a tiny second FastAPI app (`mock_targets/flaky_service.py`) that you can toggle into a "broken" mode on demand.
+* Add `POST /admin/simulate-failure/{website_id}` (see Endpoints above) to flip that toggle for demos and tests.
+* Commit your changes and push them to GitHub.
+* Share your progress in Slack and on social media.
 
-Suggested material:
-- 📘 [Celery — Canvas (chaining tasks)](https://docs.celeryq.dev/en/stable/userguide/canvas.html)
-
-**End of day:** every incident's RCA has a groundedness score and a judge score attached; a deliberately fabricated RCA is correctly flagged by the groundedness check.
-
----
-
-### Day 6 — OpenTelemetry End-to-End + Testing Hardening
-
-- Turn on auto-instrumentation for FastAPI, SQLAlchemy, Celery, and httpx.
-- Add custom spans: `anomaly.detect`, `context.build`, `llm.investigate`, `llm.evaluate`.
-- Add custom metrics: `checks_total`, `incidents_total`, `llm_tokens_total`, `llm_cost_total_usd`, `eval_score`, `detection_latency_seconds`.
-- If you have time, spin up Jaeger and look at one incident's trace end to end.
-- No new features today — this is a stabilization day. Resist scope creep.
-
-**Why:** see *Observability* in Tech Stack above — the goal is one trace per incident spanning every hop: API → scheduler → worker → DB → LLM → eval.
+Why: see ML-based anomaly detection in Scope Cuts above — a simple threshold rule is the right call here, not a shortcut around a "real" version.
 
 Suggested material:
-- 📘 [OpenTelemetry Python — Getting Started](https://opentelemetry.io/docs/languages/python/getting-started/)
-- 📘 [Jaeger — Getting Started](https://www.jaegertracing.io/docs/latest/getting-started/)
 
-**End of day:** one browsable trace shows every hop's latency for a single incident, LLM call included.
+* 🗒️ [FastAPI — First Steps](https://fastapi.tiangolo.com/tutorial/first-steps/) (you're just running a second small instance of the same app)
 
----
+Found good materials? Create a PR with links!
 
-### Day 7 — Demo Rehearsal & Buffer
+End of day: toggling the mock target reliably produces exactly one `Incident` row within one polling interval.
 
-- Freeze features. Bug fixes only from this point.
-- Write `scripts/seed_demo.py` and `scripts/reset_demo.py` so you can reset to a clean state between runs.
-- Write and rehearse a 5–10 minute demo script.
-- Record a screen capture of one full successful run, as a fallback in case the live demo breaks.
-- Polish your README.
+### Day 4 (5 September, Saturday)
 
-**Why:** no new tech today — this is the day to reread everything you built and confirm it matches what you're about to demo.
+* Define `InvestigationContext` as a Pydantic model: recent checks, latency trend, prior incidents, synthetic logs from the mock target.
+* Write a Celery task `investigate_incident` that builds that context and calls the LLM.
+* Force the LLM to return data that matches your `RCAReport` Pydantic schema (fields listed under Database Tables above). Don't regex-parse free text.
+* Save the RCA and the exact context you sent it, side by side, so the reasoning is reproducible later.
+* Commit your changes and push them to GitHub.
+* Share your progress in Slack and on social media.
+
+Why: see Background jobs and LLM integration in Tech Stack above, and Multi-LLM abstraction in Scope Cuts — pick one provider and don't build a switch for others.
 
 Suggested material:
-- 📘 [pytest docs](https://docs.pytest.org/en/stable/) (for the integration test you'll run one last time before demoing)
 
-**End of day:** two different people on your team can run the demo successfully back to back.
+* 🗒️ [Claude — Tool use overview](https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview) (structured output via tool calling)
+* 🗒️ [OpenAI — Structured Outputs guide](https://platform.openai.com/docs/guides/structured-outputs/how-to-use)
+* 🗒️ [Instructor — Start Here](https://python.useinstructor.com/start-here/) (works with either provider, built on Pydantic)
+* 🗒️ [Celery — Getting Started](https://docs.celeryq.dev/en/stable/getting-started/introduction.html)
 
----
+Found good materials? Create a PR with links!
+
+End of day: trigger a failure and, within seconds, get a full structured RCA report saved to the database.
+
+### Day 5 (6 September, Sunday)
+
+* Write a groundedness heuristic: for every evidence claim in the RCA, check it against a field that actually exists in the stored context snapshot.
+* Add a second LLM call — a judge — that scores correctness, flags hallucinations, and checks whether the model's stated confidence matches how well-supported its answer actually is.
+* Chain `evaluate_rca` after `investigate_incident` so every RCA automatically gets scored.
+* Track cost and latency on both calls.
+* Commit your changes and push them to GitHub.
+* Share your progress in Slack and on social media.
+
+Why: two independent signals beat one confidence number — a cheap, deterministic groundedness check catches unsupported claims, and a second LLM call catches things the first model got wrong about itself. This day's test suite is the most important one in the whole project, so budget real time for hand-crafted "good" and "bad" RCA fixtures.
+
+Suggested material:
+
+* 🗒️ [Celery — Canvas (chaining tasks)](https://docs.celeryq.dev/en/stable/userguide/canvas.html)
+
+Found good materials? Create a PR with links!
+
+End of day: every incident's RCA has a groundedness score and a judge score attached; a deliberately fabricated RCA is correctly flagged by the groundedness check.
+
+### Day 6 (7 September, Monday)
+
+* Turn on auto-instrumentation for FastAPI, SQLAlchemy, Celery, and httpx.
+* Add custom spans: `anomaly.detect`, `context.build`, `llm.investigate`, `llm.evaluate`.
+* Add custom metrics: `checks_total`, `incidents_total`, `llm_tokens_total`, `llm_cost_total_usd`, `eval_score`, `detection_latency_seconds`.
+* If you have time, spin up Jaeger and look at one incident's trace end to end.
+* No new features today — this is a stabilization day. Resist scope creep.
+* Commit your changes and push them to GitHub.
+* Share your progress in Slack and on social media.
+
+Why: see Observability in Tech Stack above — the goal is one trace per incident spanning every hop: API → scheduler → worker → DB → LLM → eval.
+
+Suggested material:
+
+* 🗒️ [OpenTelemetry Python — Getting Started](https://opentelemetry.io/docs/languages/python/getting-started/)
+* 🗒️ [Jaeger — Getting Started](https://www.jaegertracing.io/docs/latest/getting-started/)
+
+Found good materials? Create a PR with links!
+
+End of day: one browsable trace shows every hop's latency for a single incident, LLM call included.
+
+### Day 7 (8 September, Tuesday)
+
+* Freeze features. Bug fixes only from this point.
+* Write `scripts/seed_demo.py` and `scripts/reset_demo.py` so you can reset to a clean state between runs.
+* Write and rehearse a 5–10 minute demo script.
+* Record a screen capture of one full successful run, as a fallback in case the live demo breaks.
+* Polish your README.
+* Continue exploring more about this topic.
+* Push your changes to GitHub.
+* Share your progress in Slack and on social media.
+* Give us feedback.
+* Add the link to your project to this project of the week GitHub page.
+
+Why: no new tech today — this is the day to reread everything you built and confirm it matches what you're about to demo.
+
+Suggested material:
+
+* 🗒️ [pytest docs](https://docs.pytest.org/en/stable/) (for the integration test you'll run one last time before demoing)
+
+Found good materials? Create a PR with links!
+
+End of day: two different people on your team can run the demo successfully back to back.
 
 ## Going the Extra Mile
 
 Finished all 7 days and want to keep building? Every row in Scope Cuts above is a legitimate next step:
 
-- **Add Alembic migrations** — replace `Base.metadata.create_all` with real, versioned migrations.
-- **Add real auth** — swap the shared API key for per-user accounts and JWTs.
-- **Try ML-based anomaly detection** — replace the threshold rule with an actual model (e.g. isolation forest, seasonal decomposition) and compare its false-positive rate against the simple rule.
-- **Support multiple LLM providers** — build the abstraction layer that was skipped, and compare RCA quality, cost, and latency across providers on the same incidents.
-- **Move to Kubernetes** — if you want the orchestration experience, this is a natural target once Docker Compose feels too small.
+* Add Alembic migrations — replace `Base.metadata.create_all` with real, versioned migrations.
+* Add real auth — swap the shared API key for per-user accounts and JWTs.
+* Try ML-based anomaly detection — replace the threshold rule with an actual model (e.g. isolation forest, seasonal decomposition) and compare its false-positive rate against the simple rule.
+* Support multiple LLM providers — build the abstraction layer that was skipped, and compare RCA quality, cost, and latency across providers on the same incidents.
+* Move to Kubernetes — if you want the orchestration experience, this is a natural target once Docker Compose feels too small.
 
 Beyond that list, a few more directions:
 
-- **Build a dashboard** — a small Next.js or Streamlit UI over the existing endpoints, so `/docs` isn't your only UI.
-- **Wire up real alerting** — send incidents to Slack, PagerDuty, or email instead of only showing them in the API.
-- **Add dependency graphs** — model which sites/services depend on each other, so an RCA can reason about upstream failures.
-- **Try ensemble evals** — run two or three different judge models and compare agreement, instead of trusting a single judge.
-- **Track LLM spend** — add a running cost budget and alert when a day's investigations exceed it.
-- **Multi-region checks** — poll each site from more than one location and compare results, to catch regional outages a single-region check would miss.
+* Build a dashboard — a small Next.js or Streamlit UI over the existing endpoints, so `/docs` isn't your only UI.
+* Wire up real alerting — send incidents to Slack, PagerDuty, or email instead of only showing them in the API.
+* Add dependency graphs — model which sites/services depend on each other, so an RCA can reason about upstream failures.
+* Try ensemble evals — run two or three different judge models and compare agreement, instead of trusting a single judge.
+* Track LLM spend — add a running cost budget and alert when a day's investigations exceed it.
+* Multi-region checks — poll each site from more than one location and compare results, to catch regional outages a single-region check would miss.
 
 ## FAQ
 
-**Do I need to know Docker or FastAPI before starting?**
+### Do I need to know Docker or FastAPI before starting?
+
 No. Day 1 is designed to teach you both as you build. If you get stuck, the linked tutorials cover the exact commands and concepts you'll need that day.
 
-**Can I use OpenAI instead of Anthropic (or vice versa)?**
+### Can I use OpenAI instead of Anthropic (or vice versa)?
+
 Yes. The plan deliberately calls for "one provider SDK" — pick whichever you have API access to. The structured-output approach (native tool-calling or `instructor`) works with either.
 
-**What if I fall behind — can I combine days?**
+### What if I fall behind — can I combine days?
+
 Yes. The plan is a suggested pace, not a hard schedule. Days 6 and 7 are the easiest to compress if you're short on time, since Day 6 is instrumentation-only and Day 7 adds no new features.
 
-**Do I need Kubernetes, Alembic, or real auth to finish this?**
+### Do I need Kubernetes, Alembic, or real auth to finish this?
+
 No — all three are explicitly out of scope for the 7-day build (see Scope Cuts above). They're good "Going the Extra Mile" projects, not blockers.
 
-**My LLM calls are getting expensive while I test — what do I do?**
+### My LLM calls are getting expensive while I test — what do I do?
+
 Mock the LLM client in your tests and only call the real API when manually triggering a failure to check the RCA output. CI should never call the real API.
 
-**Can I swap out Postgres, Redis, or Celery for something else?**
+### Can I swap out Postgres, Redis, or Celery for something else?
+
 You can, but the plan assumes this exact stack — swapping a piece means adapting the day-by-day tasks yourself, since they reference these tools directly.
 
-**Where do I find the database schema or endpoint contracts?**
+### Where do I find the database schema or endpoint contracts?
+
 See Database Tables and Endpoints above.
 
 ## Materials legend
 
-- 📘 Official docs
+* 🗒️ Article
