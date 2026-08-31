@@ -15,13 +15,13 @@ Start with the app, not the model. You need real requests, stored results, logs 
 
 ## Technologies
 
-* Python and FastAPI.
-* A persistent store for sites, checks, incidents, reports, and evaluations.
+* Python, FastAPI, and SQLite.
+* Tables for sites, checks, incidents, reports, and evaluations.
 * Request logs and response-duration metrics.
-* One LLM provider or local model.
-* Your language's usual test runner.
+* The OpenAI API.
+* pytest.
 
-For the other tools, use simple equivalents, and run the investigation with a background task or command.
+Use FastAPI background tasks for checks and investigations.
 
 ## Plan
 
@@ -38,8 +38,7 @@ This is a proposed plan only, and you don't have to follow it day-by-day.
 Suggested material:
 
 * 🗒️ [DIY FastAPI](../2022/2022-12-07-fastapi.md)
-* 🗒️ [The Twelve-Factor App: Logs](https://12factor.net/logs)
-* 🗒️ [OpenTelemetry — Observability Primer](https://opentelemetry.io/docs/concepts/observability-primer/)
+* 🗒️ [SQLite documentation](https://sqlite.org/docs.html)
 
 ### Day 2 - Monitoring Engine (3 September, Thursday)
 
@@ -76,7 +75,7 @@ Suggested material:
 Suggested material:
 
 * 🗒️ [OpenAI — Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs)
-* 🗒️ [Anthropic — Context engineering](https://www.anthropic.com/engineering/context-engineering)
+* 🗒️ [OpenAI — Prompt engineering](https://platform.openai.com/docs/guides/prompt-engineering)
 
 ### Day 5 - Evaluation Layer (6 September, Sunday)
 
@@ -101,7 +100,7 @@ Suggested material:
 Suggested material:
 
 * 🗒️ [FastAPI — Testing](https://fastapi.tiangolo.com/tutorial/testing/)
-* 🗒️ [OpenTelemetry — Traces](https://opentelemetry.io/docs/concepts/signals/traces/)
+* 🗒️ [pytest](https://docs.pytest.org/en/stable/)
 
 ### Day 7 - Demo and Buffer (8 September, Tuesday)
 
@@ -123,7 +122,7 @@ There are other things you can try:
 * Compare prompts, context sizes, or models on the same incidents.
 * Let the investigation run read-only diagnostic tools before it writes its report.
 * Track model cost, latency, and report quality over time.
-* Add a distributed trace across monitoring, investigation, and evaluation.
+* Add tracing across monitoring, investigation, and evaluation.
 
 ## Projects
 
