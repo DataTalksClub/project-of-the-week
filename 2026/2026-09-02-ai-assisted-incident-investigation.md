@@ -1,6 +1,6 @@
 ## AI-Assisted Incident Investigation
 
-* **Goal**: Build a small AI-assisted investigation workflow for failures or anomalies in a system you choose.
+* **Goal**: Build a small website monitor, add incident detection, and use an LLM to investigate incidents from saved evidence.
 * **Dates**: from 2 September to 8 September 2026.
 * **Where:** [`#project-of-the-week`](https://app.slack.com/client/T01ATQK62F8/C02BP4FQH36) in DataTalks.Club (get in slack here: [https://datatalks.club/slack.html](https://datatalks.club/slack.html))
 
@@ -9,200 +9,121 @@ at DataTalks.Club, see [README.md](../README.md).
 
 ## What You're Building
 
-Pick a domain and build a workflow that notices something unusual, gathers useful context, asks an LLM for a structured diagnosis, and evaluates whether that diagnosis is trustworthy.
+You'll build a small website monitor that records uptime and latency. When recent checks look unhealthy, it opens an incident, and an LLM investigates the saved evidence. You'll then evaluate whether the report's claims are supported and whether its recommended action is useful.
 
-The domain is open. You could investigate website downtime, failed CI runs, broken data pipelines, application errors, unusual user behavior, support tickets, hardware alerts, or another problem you care about. The important part is not the exact product: it is the investigation loop.
-
-A useful version usually has five parts:
-
-1. **Signal**: something changes, fails, slows down, or produces an anomalous result.
-2. **Trigger**: your workflow decides that the signal is worth investigating.
-3. **Context**: relevant logs, metrics, metadata, recent changes, or prior incidents are collected.
-4. **Report**: the model returns a structured diagnosis or recommended next action.
-5. **Evaluation**: you check whether the output is grounded in the supplied context and useful in practice.
-
-## Choosing a Direction
-
-Choose one narrow problem for the week. These are examples, not requirements:
-
-| Direction | Example investigation |
-|---|---|
-| Service or website health | Detect uptime or latency problems and produce an evidence-linked diagnosis |
-| CI and tests | Analyze a failed run using logs, changed files, and recent commits |
-| Data pipelines | Diagnose late data, schema drift, failed jobs, or unexpected data-quality changes |
-| Application errors | Group similar exceptions and suggest where to look next |
-| Product or operational metrics | Investigate a sudden change in signups, conversions, traffic, or usage |
-
-If none of these appeal to you, choose your own system. Start with one failure mode and one kind of evidence.
+Start with the app, not the model. You need real requests, stored results, logs or metrics, and a repeatable way to make a site unhealthy before the AI has something to explain. By the end of the week, you should be able to follow one incident from first check to evaluated report.
 
 ## Technologies
 
-This is a suggested menu, not a fixed stack. Choose the tools you already know or want to learn:
+* Python and FastAPI.
+* A persistent store for sites, checks, incidents, reports, and evaluations.
+* Request logs and response-duration metrics.
+* One LLM provider or local model.
+* Your language's usual test runner.
 
-* Backend: Python, JavaScript/TypeScript, Go, Rust, Java, or another language
-* API/UI: FastAPI, Flask, Django, Express, Next.js, SvelteKit, Streamlit, CLI, or another interface
-* Storage: SQLite, PostgreSQL, MySQL, MongoDB, Redis, files, or your existing datastore
-* Jobs: cron, APScheduler, Celery, RQ, BullMQ, Temporal, background tasks, or no queue for a minimal version
-* LLM: any hosted or local model with structured output, tool calling, JSON mode, or schema validation
-* Observability: structured logs, metrics, OpenTelemetry, Langfuse, or another tracing/evaluation tool
-* Testing: your language's usual test runner plus mocks or fixtures for expensive/external calls
-
-You do not need to use every category. A CLI or small API is enough.
-
-## Scope Guidance
-
-Try to keep the first version small enough to demo in 5-10 minutes.
-
-A good minimum includes:
-
-* One source of signals or events.
-* One trigger for an investigation.
-* A bounded context object or prompt payload.
-* One structured report saved somewhere you can inspect.
-* At least one evaluation method: deterministic checks, an LLM judge, human review, or a comparison against known incidents.
-
-Deliberately defer anything that does not make the investigation loop work: multi-tenant auth, dashboards, distributed tracing, complex schema migrations, multi-provider abstractions, and production-scale monitoring.
+For the other tools, use simple equivalents, and run the investigation with a background task or command.
 
 ## Plan
 
-This is a proposed plan only; you don't have to follow it day-by-day.
+This is a proposed plan only, and you don't have to follow it day-by-day.
 
-### Day 1 (2 September, Wednesday)
+### Day 1 - Skeleton and Contracts (2 September, Wednesday)
 
-* Choose a domain and one concrete failure mode.
-* Define what "helpful output" looks like for that failure.
-* Decide the smallest signal source you can use: live events, logs, metrics, synthetic data, or a replayable fixture.
-* Set up a repository and the smallest runnable app, script, or notebook.
-* Share your progress in Slack and on social media.
+* Set up the smallest runnable app with a health endpoint.
+* Define how you'll represent sites, checks, incidents, reports, and evaluations.
+* Design a simple way to register a site and check that the app is running.
+* Add basic application logging so you can reconstruct what happened.
+* Create a GitHub project and share your progress in Slack and on social media.
 
 Suggested material:
 
+* 🗒️ [DIY FastAPI](../2022/2022-12-07-fastapi.md)
 * 🗒️ [The Twelve-Factor App: Logs](https://12factor.net/logs)
 * 🗒️ [OpenTelemetry — Observability Primer](https://opentelemetry.io/docs/concepts/observability-primer/)
 
-### Day 2 (3 September, Thursday)
+### Day 2 - Monitoring Engine (3 September, Thursday)
 
-* Create or connect your signal source.
-* Store enough metadata to reconstruct what happened later.
-* Build the simplest possible list/detail view, even if it is a CLI command or JSON response.
-* Add a fixture or synthetic example if you don't have real data yet.
-* Commit and push your changes.
-* Share your progress in Slack and on social media.
-
-Suggested material:
-
-* 🗒️ [OpenTelemetry — Getting Started](https://opentelemetry.io/docs/languages/js/getting-started/)
-* 💻 [Awesome Synthetic Data](https://github.com/gretelai/awesome-synthetic-data)
-
-### Day 3 (4 September, Friday)
-
-* Decide when an investigation should run.
-* Build a trigger, even if it starts as a manual command.
-* Collect relevant context without sending everything to the model.
-* Store or log the exact context used by the investigation.
-* Commit and push your changes.
-* Share your progress in Slack and on social media.
+* Add site registration and list the registered sites.
+* Check each site in the background for status and response duration.
+* Store every check with enough metadata to review it later.
+* Trigger real checks against a URL and watch results accumulate.
+* Commit and push your changes, then share your progress.
 
 Suggested material:
 
-* 🗒️ [Anthropic — Context engineering](https://www.anthropic.com/engineering/context-engineering)
-* 🗒️ [OpenAI — Prompt engineering guide](https://platform.openai.com/docs/guides/prompt-engineering)
+* 🗒️ [FastAPI — Background Tasks](https://fastapi.tiangolo.com/tutorial/background-tasks/)
 
-### Day 4 (5 September, Saturday)
+### Day 3 - Incidents and a Breakable Target (4 September, Friday)
 
-* Choose one model and one way to request structured output.
-* Generate a diagnosis, hypothesis, incident summary, or recommended next action.
-* Save the model output with the input context, model name, token usage, latency, and any errors.
-* Add a way to rerun the investigation from the saved context.
-* Commit and push your changes.
-* Share your progress in Slack and on social media.
+* Add a repeatable way to make a target unhealthy.
+* Turn consecutive failures or a latency spike into an open incident.
+* Let users list and resolve incidents.
+* Prevent duplicate active incidents for the same site.
+* Commit and push your changes, then share your progress.
+
+Suggested material:
+
+* 🗒️ [Google SRE — Alerting on SLOs](https://sre.google/workbook/alerting-on-slo/)
+
+### Day 4 - Context and AI Investigation (5 September, Saturday)
+
+* Build a bounded context from recent checks, response trends, and any relevant logs or metadata.
+* Add one investigation step that prepares that context and calls the model without blocking monitoring.
+* Ask for a structured incident report with a likely cause, evidence references, and a recommended action.
+* Save the exact context, response, model metadata, latency, cost, and errors.
+* Commit and push your changes, then share your progress.
 
 Suggested material:
 
 * 🗒️ [OpenAI — Structured Outputs](https://platform.openai.com/docs/guides/structured-outputs)
-* 🗒️ [Anthropic — Tool use](https://docs.anthropic.com/en/docs/build-with-claude/tool-use/overview)
-* 🗒️ [Instructor — Structured LLM outputs](https://python.useinstructor.com/)
+* 🗒️ [Anthropic — Context engineering](https://www.anthropic.com/engineering/context-engineering)
 
-### Day 5 (6 September, Sunday)
+### Day 5 - Evaluation Layer (6 September, Sunday)
 
-* Create a few examples with known good and bad outputs.
-* Check whether claims are supported by the saved context.
-* Evaluate usefulness, correctness, hallucination risk, confidence calibration, or another property relevant to your domain.
-* Track cost and latency if you are using a paid model.
-* Commit and push your changes.
-* Share your progress in Slack and on social media.
+* Create known-good and known-bad reports for testing.
+* Check whether evidence references exist in the saved context.
+* Add a second evaluation, such as an LLM judge or human review.
+* Run evaluation after investigation, and store every score with the report.
+* Commit and push your changes, then share your progress.
 
 Suggested material:
 
 * 🗒️ [OpenAI — Evaluations](https://platform.openai.com/docs/guides/evals)
-* 🗒️ [Langfuse — LLM evaluation](https://langfuse.com/docs/scores/overview)
 
-### Day 6 (7 September, Monday)
+### Day 6 - Observability and Testing (7 September, Monday)
 
-* Add retries, timeouts, and graceful failures for external calls.
-* Add tests for your trigger, context builder, report parsing, and evaluation.
-* Add metrics, logs, or traces where they will help you debug the workflow.
-* Remove anything that is not needed for the demo.
-* Commit and push your changes.
-* Share your progress in Slack and on social media.
+* Add timeouts and graceful handling for external calls.
+* Add tests for monitoring, incident detection, context building, report parsing, and evaluation.
+* Use fakes or mocks for external and model calls.
+* Add logs, metrics, or traces where they help you debug the whole run.
+* Commit and push your changes, then share your progress.
 
 Suggested material:
 
+* 🗒️ [FastAPI — Testing](https://fastapi.tiangolo.com/tutorial/testing/)
 * 🗒️ [OpenTelemetry — Traces](https://opentelemetry.io/docs/concepts/signals/traces/)
-* 🗒️ [Google SRE — Alerting on SLOs](https://sre.google/workbook/alerting-on-slo/)
 
-### Day 7 (8 September, Tuesday)
+### Day 7 - Demo and Buffer (8 September, Tuesday)
 
 * Continue exploring more about this topic.
 * Polish the documentation for your project.
-* Record or rehearse a short demo of the full investigation loop.
+* Add a simple way to reset the app for a clean demo.
+* Rehearse a short demo of monitoring, incident detection, investigation, and evaluation.
 * Push your changes to GitHub.
 * Share your progress in Slack and on social media.
 * Give us feedback.
 * Add the link to your project to this project of the week GitHub page.
 
-Suggested material:
+## Other Things
 
-* 🗒️ [OpenTelemetry — Observability](https://opentelemetry.io/docs/)
+There are other things you can try:
 
-## Going the Extra Mile
-
-Finished the minimum and want more? Try one of these:
-
-* Build a small dashboard for incidents and reports.
-* Add alerting to Slack, email, PagerDuty, or another destination.
-* Support multiple signal types and compare their effectiveness.
-* Add an agentic loop that can run read-only diagnostic tools before writing its report.
-* Compare two prompts, models, or context strategies on the same incidents.
-* Add cost controls, rate limits, or sampling for expensive investigations.
-* Store feedback from humans and use it to improve future prompts or evals.
-* Add distributed tracing across your app, background jobs, model calls, and evaluation step.
-
-## FAQ
-
-### Do I need to build a website monitor?
-
-No. Website monitoring is only one example. A CI failure triage tool or data-pipeline debugger can be just as good.
-
-### Do I have to use Python, FastAPI, PostgreSQL, Redis, or Celery?
-
-No. Use what fits your project. The plan should adapt to your tools, not the other way around.
-
-### Do I need a real production system?
-
-No. Synthetic events, logs from a local app, public datasets, or replayed historical failures are fine.
-
-### Do I need an agent framework?
-
-No. A direct LLM call with a clear prompt and structured output is enough for the first version. Add agents only if they solve a real problem.
-
-### What if model calls are too expensive?
-
-Use a local model, mock the model in tests, cache responses, and reserve live calls for a few curated examples.
-
-### What should I demo at the end of the week?
-
-Show the signal, the trigger, the context sent to the model, the generated report, and at least one evaluation result.
+* Build a small dashboard for sites, incidents, and reports.
+* Send incident notifications to Slack, email, or another destination.
+* Compare prompts, context sizes, or models on the same incidents.
+* Let the investigation run read-only diagnostic tools before it writes its report.
+* Track model cost, latency, and report quality over time.
+* Add a distributed trace across monitoring, investigation, and evaluation.
 
 ## Projects
 
@@ -213,4 +134,4 @@ List of projects from our participants:
 * ...
 * (Create a PR)
 
-(We will put the projects here after the event finishes)
+(We'll put the projects here after the event finishes)
